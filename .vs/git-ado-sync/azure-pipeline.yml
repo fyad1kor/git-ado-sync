@@ -12,7 +12,7 @@ steps:
       Write-Host Starting the synchronization process
             mkdir git-ado-sync
             $sourceURL = "https://$(github-username):$(github-access-token)@github.com/git-ado-sync.git"
-            $destURL = "https://$(github-username):$(azure-token)@dev.azure.com/git-ado-sync/_git/git-ado-sync"           
+            $destURL = "https://$(github-username):$(azure-token)@dev.azure.com/_git/git-ado-sync"           
             Set-Location "$(Build.SourcesDirectory)"
             git clone --mirror $sourceURL       
             Set-Location "$(Build.SourcesDirectory)/git-ado-sync"
